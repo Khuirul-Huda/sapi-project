@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.outfit-800 {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.outfit-600 {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.outfit-400 {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.outfit-300 {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.subcolor-one {
+  color: #A1d5d5cc;
+}
+.bg-subcolor-two {
+  background-color: #8b8bda;
+}
+
+
+body {
+  background-color: #000235;
+}
