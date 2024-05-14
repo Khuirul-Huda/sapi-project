@@ -26,17 +26,38 @@
           dubiouse URLs
         </p>
       </div>
-      <img  src="/src/assets/Other 19.png" text-3xl md:text-5xl alt="gambar" />
+      <img src="/src/assets/Other 19.png" text-3xl md:text-5xl alt="gambar" />
     </div>
 
     <section id="intro" class="mx-auto">
       <h1 class="text-center text-xl md:text-3xl">What is SAPI?</h1>
-      <p class="outfit-300 text-sm  mt-5 md:text-lg text-center">SAPI stands for Say No To Phish is an application to predict phishing site. It uses Machine Learning Algoritm.</p>
+      <p class="outfit-300 text-sm mt-5 md:text-lg text-center">
+        SAPI stands for Say No To Phish is an application to predict phishing site. It uses Machine
+        Learning Algoritm.
+      </p>
     </section>
   </main>
 </template>
 
 <script>
+import Swal from 'sweetalert2'
+
+const showPhishAlert = (url) => {
+  Swal.fire({
+    title: 'Phishing',
+    text: url + ' diprediksi sebagai situs phising!',
+    icon: 'error'
+  })
+}
+
+const showSafeAlert = (url) => {
+  Swal.fire({
+    title: 'Aman',
+    text: url + ' diprediksi BUKAN situs phising',
+    icon: 'success'
+  })
+}
+
 export default {
   methods: {
     async submit() {
@@ -47,9 +68,9 @@ export default {
       fetch(BASE_URL + '/predict', { body: formData, method: 'POST' }).then((res) =>
         res.json().then((res) => {
           if (res.predict == 'good') {
-            alert(res.url + ' diprediksi bukan phishing')
+            showSafeAlert(res.url)
           } else {
-            alert(res.url + ' diprediksi adalah phishing')
+            showPhishAlert(res.url)
           }
         })
       )

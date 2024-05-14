@@ -17,6 +17,9 @@ import { RouterLink, RouterView } from 'vue-router'
   <RouterView />
 
   <footer class="mt-10">
-    <p class="outfit-300 text-sm  mt-5 md:text-lg text-center text-white">Copyright &copy; 2023.<br> Huda, Sheva, Zuhail, Mahendra, Rizwah</p>
+    <p class="outfit-300 text-sm mt-5 md:text-lg text-center text-white">
+      Copyright &copy; 2023.<br />
+      Huda, Sheva, Zuhail, Mahendra, Rizwah
+    </p>
   </footer>
 </template>
